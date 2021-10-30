@@ -6,17 +6,20 @@
   "scripts": {
     "start": "nodemon app.js",
     "test": "jest",
-    "pretty": "prettier --write *.js"
+    "pretty": "prettier --write *.js",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "Gareth Rushgrove <gareth@morethanseven.net>",
   "license": "Apache-2.0",
   "dependencies": {
     "express": "^4.17.1",
-    "subtext": "^6.0.12"
+    "subtext": "^6.0.12",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
-    "jest": "^25.1.0",
-    "nodemon": "^2.0.2",
+    "jest": "^26.0.0",
+    "nodemon": "^2.0.3",
     "prettier": "1.19.1"
   },
   "jest": {
@@ -24,5 +27,6 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/"
     ]
-  }
+  },
+  "snyk": true
 }
